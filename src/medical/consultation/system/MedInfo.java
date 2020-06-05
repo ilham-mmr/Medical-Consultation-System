@@ -10,12 +10,16 @@ import java.io.Serializable;
 /**
  *
  * @author Ilham MMR <ilham.mmr@gmail.com>
+ * -
+ * -
+ * -
+ * -
  */
 public class MedInfo implements Serializable {
     private String diseaseId;
     private String name;
     private String causes;
-    private String symptomps;
+    private String symptoms;
      private String treatments;
     private String medications;
 
@@ -23,7 +27,7 @@ public class MedInfo implements Serializable {
         this.diseaseId = diseaseId;
         this.name = name;
         this.causes = causes;
-        this.symptomps = symptomps;
+        this.symptoms = symptomps;
         this.treatments = treatments;
         this.medications = medications;
     }
@@ -53,11 +57,11 @@ public class MedInfo implements Serializable {
     }
 
     public String getSymptomps() {
-        return symptomps;
+        return symptoms;
     }
 
     public void setSymptomps(String symptomps) {
-        this.symptomps = symptomps;
+        this.symptoms = symptomps;
     }
 
     public String getTreatments() {
