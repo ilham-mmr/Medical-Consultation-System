@@ -81,7 +81,7 @@
                                   <Component id="idField" alignment="0" pref="116" max="32767" attributes="0"/>
                                   <Component id="nameField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="causesField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="symptompsField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="symptomsField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="treatmentsField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="medicationsField" alignment="0" max="32767" attributes="0"/>
                               </Group>
@@ -125,7 +125,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="symptompsField" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="symptomsField" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -192,7 +192,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Symptomps:"/>
+            <Property name="text" type="java.lang.String" value="Symptoms:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="causesField">
@@ -200,7 +200,7 @@
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="symptompsField">
+        <Component class="javax.swing.JTextField" name="symptomsField">
           <Properties>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
@@ -251,10 +251,44 @@
                     <Column editable="true" title="Disease ID" type="java.lang.Object"/>
                     <Column editable="true" title="Name" type="java.lang.Object"/>
                     <Column editable="true" title="Causes" type="java.lang.Object"/>
-                    <Column editable="true" title="Symptomps" type="java.lang.Object"/>
+                    <Column editable="true" title="Symptoms" type="java.lang.Object"/>
                     <Column editable="true" title="Treatments" type="java.lang.Object"/>
                     <Column editable="true" title="Medications" type="java.lang.Object"/>
                   </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
                 </Property>
                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>

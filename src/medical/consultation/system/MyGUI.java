@@ -95,7 +95,7 @@ public class MyGUI extends javax.swing.JFrame {
         idField.setText("");
         nameField.setText("");
         causesField.setText("");
-        symptompsField.setText("");
+        symptomsField.setText("");
         treatmentsField.setText("");
         medicationsField.setText("");
     }
@@ -117,7 +117,7 @@ public class MyGUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         causesField = new javax.swing.JTextField();
-        symptompsField = new javax.swing.JTextField();
+        symptomsField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         treatmentsField = new javax.swing.JTextField();
@@ -150,11 +150,11 @@ public class MyGUI extends javax.swing.JFrame {
         jLabel3.setText("Causes:");
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Symptomps:");
+        jLabel4.setText("Symptoms:");
 
         causesField.setToolTipText("");
 
-        symptompsField.setToolTipText("");
+        symptomsField.setToolTipText("");
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Treatments:");
@@ -173,7 +173,7 @@ public class MyGUI extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Disease ID", "Name", "Causes", "Symptomps", "Treatments", "Medications"
+                "Disease ID", "Name", "Causes", "Symptoms", "Treatments", "Medications"
             }
         ));
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -231,7 +231,7 @@ public class MyGUI extends javax.swing.JFrame {
                                 .addComponent(idField, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                                 .addComponent(nameField)
                                 .addComponent(causesField)
-                                .addComponent(symptompsField)
+                                .addComponent(symptomsField)
                                 .addComponent(treatmentsField)
                                 .addComponent(medicationsField))
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -264,7 +264,7 @@ public class MyGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(symptompsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(symptomsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -312,7 +312,7 @@ public class MyGUI extends javax.swing.JFrame {
         String id = idField.getText();
         String name = nameField.getText();
         String causes = causesField.getText();
-        String symptomps = symptompsField.getText();
+        String symptomps = symptomsField.getText();
         String treatments = treatmentsField.getText();
         String medication = medicationsField.getText();
 
@@ -336,7 +336,7 @@ public class MyGUI extends javax.swing.JFrame {
             String id = idField.getText();
             String name = nameField.getText();
             String causes = causesField.getText();
-            String symptomps = symptompsField.getText();
+            String symptomps = symptomsField.getText();
             String treatments = treatmentsField.getText();
             String medication = medicationsField.getText();
 
@@ -380,7 +380,7 @@ public class MyGUI extends javax.swing.JFrame {
             idField.setText(medInfo.getDiseaseId());
             nameField.setText(medInfo.getName());
             causesField.setText(medInfo.getCauses());
-            symptompsField.setText(medInfo.getSymptomps());
+            symptomsField.setText(medInfo.getSymptomps());
             treatmentsField.setText(medInfo.getTreatments());
             medicationsField.setText(medInfo.getMedications());
         }
@@ -438,7 +438,7 @@ public class MyGUI extends javax.swing.JFrame {
     private javax.swing.JTextField medicationsField;
     private javax.swing.JTextField nameField;
     private javax.swing.JButton submitBtn;
-    private javax.swing.JTextField symptompsField;
+    private javax.swing.JTextField symptomsField;
     private javax.swing.JTextField treatmentsField;
     private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
