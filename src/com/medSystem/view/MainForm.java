@@ -128,7 +128,7 @@ public class MainForm extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        aboutLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Medical Consultation System");
@@ -260,17 +260,17 @@ public class MainForm extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/hospital_24px.png"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/help_32px.png"))); // NOI18N
-        jLabel10.setText("About");
-        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+        aboutLabel.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        aboutLabel.setForeground(new java.awt.Color(255, 255, 255));
+        aboutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/help_32px.png"))); // NOI18N
+        aboutLabel.setText("About");
+        aboutLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        aboutLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel10MouseClicked(evt);
+                aboutLabelMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, -1, -1));
+        jPanel1.add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -372,11 +372,11 @@ public class MainForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTable1MouseClicked
 
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+    private void aboutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutLabelMouseClicked
         JOptionPane.showMessageDialog(null, "GROUP MEMBERS"
                 + "\nRachmat Ilham Muslim Maulana (268954)"
                 + "\nasdfas", "About", JOptionPane.QUESTION_MESSAGE);
-    }//GEN-LAST:event_jLabel10MouseClicked
+    }//GEN-LAST:event_aboutLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -415,11 +415,11 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel aboutLabel;
     private javax.swing.JTextField causesField;
     private javax.swing.JButton deleteBtn;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
