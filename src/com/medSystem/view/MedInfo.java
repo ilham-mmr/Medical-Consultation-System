@@ -1,9 +1,11 @@
+package com.medSystem.view;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package medical.consultation.system;
+
 
 import java.io.Serializable;
 
@@ -19,7 +21,7 @@ public class MedInfo implements Serializable {
     private String diseaseId;
     private String name;
     private String causes;
-    private String symptoms;
+    private String symptom;
      private String treatments;
     private String medications;
 
@@ -27,7 +29,7 @@ public class MedInfo implements Serializable {
         this.diseaseId = diseaseId;
         this.name = name;
         this.causes = causes;
-        this.symptoms = symptomps;
+        this.symptom = symptomps;
         this.treatments = treatments;
         this.medications = medications;
     }
@@ -57,11 +59,11 @@ public class MedInfo implements Serializable {
     }
 
     public String getSymptomps() {
-        return symptoms;
+        return symptom;
     }
 
     public void setSymptomps(String symptomps) {
-        this.symptoms = symptomps;
+        this.symptom = symptomps;
     }
 
     public String getTreatments() {

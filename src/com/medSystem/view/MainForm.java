@@ -1,9 +1,10 @@
+package com.medSystem.view;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 
 import java.awt.event.MouseEvent;
 import java.io.FileInputStream;
@@ -18,19 +19,16 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Ilham MMR <ilham.mmr@gmail.com>
- * -
- * -
- * -
+ * @author Ilham MMR <ilham.mmr@gmail.com> - - -
  */
-public class MyGUI extends javax.swing.JFrame {
+public class MainForm extends javax.swing.JFrame {
 
     private List<MedInfo> medInfos;
 
     /**
      * Creates new form MyGUI
      */
-    public MyGUI() {
+    public MainForm() {
         medInfos = new ArrayList<>();
         initComponents();
         populateArrayList();
@@ -95,7 +93,7 @@ public class MyGUI extends javax.swing.JFrame {
         idField.setText("");
         nameField.setText("");
         causesField.setText("");
-        symptomsField.setText("");
+        symptomField.setText("");
         treatmentsField.setText("");
         medicationsField.setText("");
     }
@@ -117,7 +115,7 @@ public class MyGUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         causesField = new javax.swing.JTextField();
-        symptomsField = new javax.swing.JTextField();
+        symptomField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         treatmentsField = new javax.swing.JTextField();
@@ -128,43 +126,72 @@ public class MyGUI extends javax.swing.JFrame {
         updateBtn = new javax.swing.JButton();
         deleteBtn = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Medical Consultation System");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 102));
         jPanel1.setForeground(new java.awt.Color(51, 51, 0));
         jPanel1.setToolTipText("");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/key_24px.png"))); // NOI18N
         jLabel1.setText("Disease ID:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/autograph_24px.png"))); // NOI18N
         jLabel2.setText("Name:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, -1, -1));
 
         idField.setToolTipText("");
+        jPanel1.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 180, -1));
 
         nameField.setToolTipText("");
+        jPanel1.add(nameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 180, -1));
 
+        jLabel3.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/virus_24px.png"))); // NOI18N
         jLabel3.setText("Causes:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/asthma_24px.png"))); // NOI18N
         jLabel4.setText("Symptoms:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
         causesField.setToolTipText("");
+        jPanel1.add(causesField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 180, -1));
 
-        symptomsField.setToolTipText("");
+        symptomField.setToolTipText("");
+        jPanel1.add(symptomField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 180, -1));
 
+        jLabel5.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/treatment_24px.png"))); // NOI18N
         jLabel5.setText("Treatments:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/syringe_24px.png"))); // NOI18N
         jLabel6.setText("Medications:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
 
         treatmentsField.setToolTipText("");
+        jPanel1.add(treatmentsField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 180, -1));
 
         medicationsField.setToolTipText("");
+        jPanel1.add(medicationsField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 180, -1));
 
         jTable1.setBackground(new java.awt.Color(102, 102, 255));
         jTable1.setForeground(new java.awt.Color(255, 255, 255));
@@ -183,149 +210,105 @@ public class MyGUI extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 482, 398));
+
+        submitBtn.setBackground(new java.awt.Color(70, 70, 70));
+        submitBtn.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
+        submitBtn.setForeground(new java.awt.Color(255, 255, 255));
+        submitBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/submit_document_24px.png"))); // NOI18N
         submitBtn.setText("Submit");
         submitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(submitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
 
+        updateBtn.setBackground(new java.awt.Color(70, 70, 70));
+        updateBtn.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
+        updateBtn.setForeground(new java.awt.Color(255, 255, 255));
+        updateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/update_file_24px.png"))); // NOI18N
         updateBtn.setText("Update");
         updateBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(updateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, -1, -1));
 
+        deleteBtn.setBackground(new java.awt.Color(70, 70, 70));
+        deleteBtn.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
+        deleteBtn.setForeground(new java.awt.Color(255, 255, 255));
+        deleteBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/delete_file_24px.png"))); // NOI18N
         deleteBtn.setText("Delete");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, -1, -1));
 
         jLabel7.setBackground(new java.awt.Color(187, 187, 187));
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Medical Consultation System");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(submitBtn))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(idField, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                                .addComponent(nameField)
-                                .addComponent(causesField)
-                                .addComponent(symptomsField)
-                                .addComponent(treatmentsField)
-                                .addComponent(medicationsField))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(updateBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(deleteBtn))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel7)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel7)
-                .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(causesField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(symptomsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(treatmentsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(medicationsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitBtn)
-                    .addComponent(updateBtn)
-                    .addComponent(deleteBtn))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
-        );
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/medical_history_50px.png"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/hospital_24px.png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/medSystem/view/icons/help_32px.png"))); // NOI18N
+        jLabel10.setText("About");
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 858, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 851, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 423, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         String id = idField.getText();
         String name = nameField.getText();
         String causes = causesField.getText();
-        String symptomps = symptomsField.getText();
+        String symptom = symptomField.getText();
         String treatments = treatmentsField.getText();
         String medication = medicationsField.getText();
 
-        MedInfo medInfo = new MedInfo(id, name, causes, symptomps, treatments, medication);
-        medInfos.add(medInfo);
-        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        if (id.isEmpty() || name.isEmpty() || causes.isEmpty() || causes.isEmpty() || symptom.isEmpty() || treatments.isEmpty() || medication.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Fill in the form properly!", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            MedInfo medInfo = new MedInfo(id, name, causes, symptom, treatments, medication);
+            medInfos.add(medInfo);
+            DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
 
-        String data[] = {id, name, causes, symptomps, treatments, medication};
-        tableModel.addRow(data);
+            String data[] = {id, name, causes, symptom, treatments, medication};
+            tableModel.addRow(data);
 
-        saveDataToFile();
+            saveDataToFile();
 
-        clearTextField();
+            clearTextField();
+        }
     }//GEN-LAST:event_submitBtnActionPerformed
 
     private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
@@ -336,27 +319,30 @@ public class MyGUI extends javax.swing.JFrame {
             String id = idField.getText();
             String name = nameField.getText();
             String causes = causesField.getText();
-            String symptomps = symptomsField.getText();
+            String symptom = symptomField.getText();
             String treatments = treatmentsField.getText();
             String medication = medicationsField.getText();
+            if (id.isEmpty() || name.isEmpty() || causes.isEmpty() || causes.isEmpty() || symptom.isEmpty() || treatments.isEmpty() || medication.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Fill in the form properly!", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                tableModel.setValueAt(id, jTable1.getSelectedRow(), 0);
+                tableModel.setValueAt(name, jTable1.getSelectedRow(), 1);
+                tableModel.setValueAt(causes, jTable1.getSelectedRow(), 2);
+                tableModel.setValueAt(symptom, jTable1.getSelectedRow(), 3);
+                tableModel.setValueAt(treatments, jTable1.getSelectedRow(), 4);
+                tableModel.setValueAt(medication, jTable1.getSelectedRow(), 5);
 
-            tableModel.setValueAt(id, jTable1.getSelectedRow(), 0);
-            tableModel.setValueAt(name, jTable1.getSelectedRow(), 1);
-            tableModel.setValueAt(causes, jTable1.getSelectedRow(), 2);
-            tableModel.setValueAt(symptomps, jTable1.getSelectedRow(), 3);
-            tableModel.setValueAt(treatments, jTable1.getSelectedRow(), 4);
-            tableModel.setValueAt(medication, jTable1.getSelectedRow(), 5);
+                MedInfo medInfoUpdate = medInfos.get(index);
+                medInfoUpdate.setDiseaseId(id);
+                medInfoUpdate.setName(name);
+                medInfoUpdate.setCauses(causes);
+                medInfoUpdate.setSymptomps(symptom);
+                medInfoUpdate.setTreatments(treatments);
+                medInfoUpdate.setMedications(medication);
 
-            MedInfo medInfoUpdate = medInfos.get(index);
-            medInfoUpdate.setDiseaseId(id);
-            medInfoUpdate.setName(name);
-            medInfoUpdate.setCauses(causes);
-            medInfoUpdate.setSymptomps(symptomps);
-            medInfoUpdate.setTreatments(treatments);
-            medInfoUpdate.setMedications(medication);
-
-            saveDataToFile();
-            clearTextField();
+                saveDataToFile();
+                clearTextField();
+            }
         }
     }//GEN-LAST:event_updateBtnActionPerformed
 
@@ -380,11 +366,17 @@ public class MyGUI extends javax.swing.JFrame {
             idField.setText(medInfo.getDiseaseId());
             nameField.setText(medInfo.getName());
             causesField.setText(medInfo.getCauses());
-            symptomsField.setText(medInfo.getSymptomps());
+            symptomField.setText(medInfo.getSymptomps());
             treatmentsField.setText(medInfo.getTreatments());
             medicationsField.setText(medInfo.getMedications());
         }
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        JOptionPane.showMessageDialog(null, "GROUP MEMBERS"
+                + "\nRachmat Ilham Muslim Maulana (268954)"
+                + "\nasdfas", "About", JOptionPane.QUESTION_MESSAGE);
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments
@@ -403,20 +395,21 @@ public class MyGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MyGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MyGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MyGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MyGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MyGUI().setVisible(true);
+                new MainForm().setVisible(true);
             }
         });
     }
@@ -426,19 +419,22 @@ public class MyGUI extends javax.swing.JFrame {
     private javax.swing.JButton deleteBtn;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField medicationsField;
     private javax.swing.JTextField nameField;
     private javax.swing.JButton submitBtn;
-    private javax.swing.JTextField symptomsField;
+    private javax.swing.JTextField symptomField;
     private javax.swing.JTextField treatmentsField;
     private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
