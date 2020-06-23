@@ -375,7 +375,9 @@ public class MainForm extends javax.swing.JFrame {
     private void aboutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutLabelMouseClicked
         JOptionPane.showMessageDialog(null, "GROUP MEMBERS"
                 + "\nRachmat Ilham Muslim Maulana (268954)"
-                + "\nasdfas", "About", JOptionPane.QUESTION_MESSAGE);
+                + "\nKalai Arasi A/P Sadhu (270861)"
+                + "\nNurul Fatin Shahira binti Rahim (271616)"
+                + "\nNurul Nadiah binti Yusuf (271278)", "About", JOptionPane.QUESTION_MESSAGE);
     }//GEN-LAST:event_aboutLabelMouseClicked
 
     /**
