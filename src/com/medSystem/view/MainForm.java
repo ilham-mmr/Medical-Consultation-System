@@ -12,7 +12,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -29,9 +29,9 @@ public class MainForm extends javax.swing.JFrame {
      * Creates new form MyGUI
      */
     public MainForm() {
-        medInfos = new ArrayList<>();
+        medInfos = new LinkedList<>();
         initComponents();
-        populateArrayList();
+        populateLinkedList();
         showData();
     }
 
@@ -46,7 +46,7 @@ public class MainForm extends javax.swing.JFrame {
         }
     }
 
-    private void populateArrayList() {
+    private void populateLinkedList() {
         try {
             FileInputStream file = new FileInputStream("MedDatabase.txt");
             ObjectInputStream inputfile = new ObjectInputStream(file);
